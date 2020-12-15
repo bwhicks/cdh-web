@@ -6,7 +6,7 @@
   "author": "The Center for Digital Humanities at Princeton <cdhdevteam@princeton.edu>",
   "license": "Apache-2.0",
   "scripts": {
-    "serve": "python manage.py runserver",
+    "serve": "python manage.py runserver --insecure",
     "percy": "percy exec -- python ./ci/visual_tests.py",
     "test": "start-server-and-test serve http://localhost:8000 percy"
   },
