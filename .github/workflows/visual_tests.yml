@@ -1,6 +1,7 @@
 name: visual tests
 
 on:
+  push:
   pull_request:
 
 env:
