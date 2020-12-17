@@ -14,6 +14,9 @@ from selenium import webdriver
 __author__ = "CDH @ Princeton"
 __email__ = "cdh-info@princeton.edu"
 
+# viewport widths at which to take a snapshot of a page
+DEVICE_WIDTHS = [375, 768, 1280]
+
 
 def setup() -> webdriver.Chrome:
     """Initialize and return a browser driver to use for taking snapshots."""
@@ -30,17 +33,17 @@ def get_urls() -> Iterable[str]:
     """Get the set of URLs to execute visual regression testing against."""
     # TODO make this smarter; maybe crawl the top-level sitemap?
     return [
-        "http://localhost:8000/",               # homepage
-        "http://localhost:8000/research",       # landing page
-        "http://localhost:8000/about",          # content page
-        "http://localhost:8000/people/staff",   # person list page
-        "http://localhost:8000/projects",       # project list page
-        "http://localhost:8000/events",         # event list page
-        "http://localhost:8000/updates",        # blog post index
-        # TODO project detail page
-        # TODO event detail page
-        # TODO profile page
-        # TODO blog post
+        "http://localhost:8000/",
+        "http://localhost:8000/about",
+        "http://localhost:8000/grants",
+        "http://localhost:8000/people/staff",
+        "http://localhost:8000/people/meredith-martin/"
+        "http://localhost:8000/projects",
+        "http://localhost:8000/projects/princeton-prosody-archive/"
+        "http://localhost:8000/events",
+        "http://localhost:8000/events/2018/03/dataviz-2/"
+        "http://localhost:8000/updates",
+        "http://localhost:8000/updates/2018/08/28/bridging-dh-oss/"
     ]
 
 
@@ -48,11 +51,12 @@ def run() -> None:
     """Take DOM snapshots of a set of URLs and upload to Percy."""
     browser = setup()
 
-    # visit each URL, wait 10 seconds, then upload to Percy using page's title
+    # visit each URL, wait 10 seconds, then upload to Percy
     for url in get_urls():
         browser.get(url)
         browser.implicitly_wait(10)
-        percySnapshot(browser=browser, name=browser.title)
+        percySnapshot(browser=browser, name=browser.title,
+                      widths=DEVICE_WIDTHS)
 
     # shut down when finished
     browser.quit()
