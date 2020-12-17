@@ -2211,9 +2211,10 @@
         "pk": 1,
         "fields": {
             "project": 1,
-            "user": 2,
-            "grant": 1,
-            "role": 1
+            "person": 2,
+            "role": 1,
+            "start_date": "2016-09-01",
+            "end_date": "2018-06-30"
         }
     },
     {
@@ -2221,9 +2222,10 @@
         "pk": 2,
         "fields": {
             "project": 1,
-            "user": 1,
-            "grant": 1,
-            "role": 2
+            "person": 1,
+            "role": 2,
+            "start_date": "2016-09-01",
+            "end_date": "2018-06-30"
         }
     },
     {
@@ -2231,9 +2233,10 @@
         "pk": 3,
         "fields": {
             "project": 1,
-            "user": 3,
-            "grant": 1,
-            "role": 3
+            "person": 3,
+            "role": 3,
+            "start_date": "2016-09-01",
+            "end_date": "2018-06-30"
         }
     },
     {
@@ -2241,9 +2244,10 @@
         "pk": 4,
         "fields": {
             "project": 2,
-            "user": 6,
-            "grant": 2,
-            "role": 1
+            "person": 6,
+            "role": 1,
+            "start_date": "2017-07-01",
+            "end_date": "2018-09-06"
         }
     },
     {
@@ -2251,9 +2255,10 @@
         "pk": 5,
         "fields": {
             "project": 2,
-            "user": 1,
-            "grant": 2,
-            "role": 2
+            "person": 1,
+            "role": 2,
+            "start_date": "2017-07-01",
+            "end_date": "2018-09-06"
         }
     },
     {
@@ -2261,9 +2266,10 @@
         "pk": 6,
         "fields": {
             "project": 2,
-            "user": 4,
-            "grant": 2,
-            "role": 4
+            "person": 4,
+            "role": 4,
+            "start_date": "2017-07-01",
+            "end_date": "2018-09-06"
         }
     },
     {
@@ -2271,9 +2277,10 @@
         "pk": 7,
         "fields": {
             "project": 3,
-            "user": 5,
-            "grant": 3,
-            "role": 1
+            "person": 5,
+            "role": 1,
+            "start_date": "2018-09-06",
+            "end_date": "2019-07-01"
         }
     },
     {
@@ -2281,9 +2288,10 @@
         "pk": 8,
         "fields": {
             "project": 3,
-            "user": 5,
-            "grant": 3,
-            "role": 2
+            "person": 5,
+            "role": 2,
+            "start_date": "2018-09-06",
+            "end_date": "2019-07-01"
         }
     }
 ]
